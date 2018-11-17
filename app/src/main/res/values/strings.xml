@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="rating">Rating</string>
+    <string name="release_date">Release Date</string>
+    <string name="publish_date">publish_date</string>
+    <string name="movie_over_view">Movie Over View</string>
+    <string name="todo">TODO</string>
+</resources>

@@ -8,13 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
+
 
 import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-import info.popularmovies.Detail;
+import info.popularmovies.DetailActivity;
 import info.popularmovies.R;
 
 public class FavouriteListAdapter extends RecyclerView.Adapter<FavouriteListAdapter.MyViewHolder> {
@@ -51,7 +51,7 @@ public class FavouriteListAdapter extends RecyclerView.Adapter<FavouriteListAdap
         holder.thumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), Detail.class);
+                Intent intent = new Intent(view.getContext(), DetailActivity.class);
                 intent.putExtra("original_title", title);
                 intent.putExtra("poster_path", poster);
                 intent.putExtra("release_date", date);

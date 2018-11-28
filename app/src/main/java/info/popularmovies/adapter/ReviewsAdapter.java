@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import info.popularmovies.R;
-import info.popularmovies.Review;
+import info.popularmovies.model.Review;
 
 public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.MyViewHolder> {
     private Context context;

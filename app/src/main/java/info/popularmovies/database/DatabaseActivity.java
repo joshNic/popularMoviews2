@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
@@ -40,7 +39,7 @@ public class DatabaseActivity extends AppCompatActivity {
         mWordViewModel.getAllWords().observe(this, new Observer<List<DatabaseMovie>>() {
             @Override
             public void onChanged(@Nullable final List<DatabaseMovie> movie) {
-                // Update the cached copy of the words in the adapter.
+
                 adapter.setWords(movie);
             }
         });

@@ -13,8 +13,8 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-import info.popularmovies.Detail;
-import info.popularmovies.Movie;
+import info.popularmovies.DetailActivity;
+import info.popularmovies.model.Movie;
 import info.popularmovies.R;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHolder> {
@@ -51,7 +51,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
             @Override
             public void onClick(View view) {
                 //listener.onCardSelected(position, holder.thumbnail);
-                Intent intent = new Intent(view.getContext(), Detail.class);
+                Intent intent = new Intent(view.getContext(), DetailActivity.class);
                 intent.putExtra("original_title", title);
                 intent.putExtra("poster_path", poster);
                 intent.putExtra("release_date", date);
@@ -63,6 +63,13 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
             }
         });
     }
+    public void setMovies(List<Movie> movie) {
+        movieList.clear();
+        movieList.addAll(movie);
+        //movieList = movie;
+        notifyDataSetChanged();
+    }
+
 
     @Override
     public int getItemCount() {

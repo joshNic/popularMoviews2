@@ -51,8 +51,10 @@ import info.popularmovies.database.DatabaseMovie;
 
 import info.popularmovies.database.MovieRoomDatabase;
 import info.popularmovies.database.MovieViewModel;
+import info.popularmovies.model.Review;
+import info.popularmovies.model.Trailer;
 
-public class Detail extends AppCompatActivity {
+public class DetailActivity extends AppCompatActivity {
     private CollapsingToolbarLayout collapsingToolbar;
     private AppBarLayout appBarLayout;
     private TextView overView, releaseDate, voteRange;
@@ -275,12 +277,12 @@ public class Detail extends AppCompatActivity {
                     public void run() {
                         if (movieFromDatabase != null) {
                             deleteMovies(original_titl, release_dat, poster_pat, vote_averag, over_vie, movie_i);
-                            Toast.makeText(Detail.this, "movie was removed from favourites list", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DetailActivity.this, "movie was removed from favourites list", Toast.LENGTH_SHORT).show();
                             isFavoriteMovie = true;
 
                         } else {
                             makeFavourite(original_titl, release_dat, poster_pat, vote_averag, over_vie, movie_i);
-                            Toast.makeText(Detail.this, "movie was added to favourites list", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DetailActivity.this, "movie was added to favourites list", Toast.LENGTH_SHORT).show();
                             isFavoriteMovie = false;
 
                         }

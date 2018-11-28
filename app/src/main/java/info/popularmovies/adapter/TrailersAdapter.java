@@ -14,7 +14,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import info.popularmovies.R;
-import info.popularmovies.Trailer;
+import info.popularmovies.model.Trailer;
 
 public class TrailersAdapter extends RecyclerView.Adapter<TrailersAdapter.MyViewHolder> {
     private Context context;

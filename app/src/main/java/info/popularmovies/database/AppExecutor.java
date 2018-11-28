@@ -1,13 +1,9 @@
 package info.popularmovies.database;
 
-import android.os.Handler;
-import android.os.Looper;
-import android.support.annotation.NonNull;
-
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class AppExecutor {
+public final class AppExecutor {
 
     private static final Object LOCK = new Object();
     private static AppExecutor sInstance;
@@ -25,6 +21,7 @@ public class AppExecutor {
         }
         return sInstance;
     }
+
     public Executor diskIO() {
         return diskIO;
     }

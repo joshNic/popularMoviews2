@@ -11,7 +11,7 @@ public class MovieViewModel extends AndroidViewModel {
 
     private LiveData<List<DatabaseMovie>> mAllWords;
     private LiveData<DatabaseMovie> favouriteMovie;
-    //Movie id
+    //Moviet id
     private int mId;
 
     public MovieViewModel(Application application) {

@@ -1,4 +1,4 @@
-package info.popularmovies;
+package info.popularmovies.model;
 
 public class Trailer {
     public String key;
